@@ -1,0 +1,56 @@
+@keyframes move-up-left {
+	0% {
+		transform: translate(0, 0);
+	}
+	50% {
+		transform: translate(40px, 80px);
+	}
+	100%{
+		transform: translate(0,0);
+	}
+}
+
+@keyframes rotation{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes move-right{
+	0%{
+		transform: translateX(0); /*движение по координатной линии X*/
+	}
+	50%{
+		transform: translateX(230%); /*движение на расстояние 230% от размера фигуры*/
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+
+@keyframes rotate-move{
+	0%{
+		transform: translate(0, 0) rotate(0deg);
+	}
+	50%{
+		transform: translate(80px, 200px) rotate(180deg);
+	}
+	100%{
+		transform: translate(0, 0) rotate(359deg);
+	}
+}
+
+@keyframes move-left-down{
+	0%{
+		transform: translate(0, 0) rotate(0deg);
+	}
+	50%{
+		transform: translate(-180px, 200px) rotate(180deg);
+	}
+	100%{
+		transform: translate(0, 0) rotate(359deg);
+	}
+}

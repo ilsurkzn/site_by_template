@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap'); /*скачали шрифты на компьютер
+пользователя */
+
+*{
+	margin: 0; 
+	padding: 0;
+	font-family: 'Montserrat', sans-serif; /*копирием с гуглшрифтов из CSS rules to specify families*/
+	box-sizing: border-box; 
+
+	/*
+	box-sizing: border-box; нужен чтобы padding не увеличивал ширину блока, а учитывался в заданный блок.
+	*/
+}
+
+html {
+	scroll-behavior: smooth; /*применяется только для всей html страницы*/
+}
+
+.container{
+	width: 1300px;
+	padding: 100px 15px; /*100 по Y, 15px по X*/
+	margin: 0 auto; /* auto - по центру */
+
+}
+
+.section-title{
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.section-text{
+	line-height: 30px;
+	font-size: 20px;
+}
+
+.nav-menu{
+	position: fixed; /* отсчет идет с верхней точки страницы*/
+	top: 0;			/*отсчет начинаем с верхней части страницы*/
+	width: 100%;
+	height: 100px;
+	background-color: #121212;
+	padding: 20px;
+	z-index: 20; /*расположение элементов по оси z, в зависимости от индекса, чем больше индекс, тем выше элемент по оси z*/
+}
+
+.nav-item{
+	display: inline-block; /*говорит что этот объект выстраивается в строчку (строчным блоком)*/
+	color: #fff;
+	text-decoration: none;
+	font-size: 25px;
+	margin-left: 20px;
+	transform: 0.3s; /*время анимации*/
+}
+
+.nav-container{
+	float: right;
+}
+
+.nav-item:hover { /*при наведении курсора меняется цвет объекта. Запускается псевдокласc hover*/
+	color: #FFC997;
+	transform: scale(0.9); /*увеличивается, если больше 1 и уменьшается, если мешьше 1, объект при наведении мыши*/
+
+}
+.main-section{
+	height: 100vh; /*аналог процентов, один раз фиксирует один размер экрана. 100 это % от отображаемого экрана*/
+	background: linear-gradient(#DB7E, #FFC997);
+}
+
+.main-content{
+	position: absolute;/*размещаем элемент по центру*/
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /*Позволяет размесить на 50% вверх и влево секцию "Мой создаем сайты"*/
+	width: fit-content;
+	z-index: 10;
+}
+
+.main-content-text{
+	font-size: 100px;
+	color: #fff;
+	text-shadow: 10px 10px 0 #e06161; /*первое - значение влево или вправо, второе - вверх или вниз, третье - размытие*/
+}
+
+.main-content-btn{
+	display: block;
+	margin: auto;
+	width: 300px;
+	height: 80px;
+	margin: 15px auto; /* auto - выравнивание по центру блока, а не текста */
+	background-color: #fff;
+	border-radius: 50px;				/*закругление углов*/
+	box-shadow: 10px 10px 0 #E06161;
+	text-decoration: none;
+	text-align: center;
+	font-weight: 600
+	color: #000;
+	font-size: 20px;
+	line-height: 80px;
+}
+
+.main-background{
+	position: absolute; /*нужно чтобы зафиксировать блок на самом вверху и чтобы можно было двигать блок*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden; /*обрезается фигура, которая выходит за границы экрана*/
+}
+
+.circle1{
+	position: absolute; /*игнорирует верстку сайта, не нарушает остальные блоки*/
+	top: -100px;
+	left: -50px;
+	animation: move-up-left 10s linear infinite;
+}
+
+.circle2{
+	position: absolute; 
+	top: -40px;
+	right: 40px;
+	animation: rotate-move 10s linear infinite; 
+}
+
+.circle3{
+	position: absolute;
+	bottom: -30px; 
+	left: -30px;
+	animation: move-up-left 8s linear infinite; /*8s длительность в сек, linear-линейное движение, infinite - длительность
+	бесконочно*/
+}
+
+.circle-bordered{
+	position: absolute;
+	bottom: -30px;
+	left: 250px;
+	animation: move-right 15s linear infinite;
+	
+}
+
+.circle-dashed-border{
+	position: absolute;
+	bottom: -180px;
+	right: -100px;
+	animation: rotation 10s linear infinite;
+}
+
+.triangle{
+	position: absolute;
+	top: 20%;
+	left: 40%;	
+	animation: move-right 25s linear infinite;
+}
+
+.octagon{
+	position: absolute;
+	top: 65%;
+	left: 50%;	
+	animation: rotate-move 25s linear infinite;
+}
+
+.doing{
+	background: linear-gradient(7deg, #DB7E7E 18%, #FFC997 70%, #FFFFFF 70%);
+}
